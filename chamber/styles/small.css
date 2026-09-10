@@ -219,9 +219,19 @@ footer {
   width: 100%;
 }
 
-.social img {
-  width: 30px;
-  height: 30px;
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #0f2438;
+  border-radius: 50%;
+}
+
+.social a img {
+  width: 20px;
+  height: 20px;
   filter: brightness(0) invert(1);
 }
 
