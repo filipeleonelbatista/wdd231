@@ -204,10 +204,11 @@ h1 {
 footer {
   background-color: #1a3a5c;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -215,6 +216,7 @@ footer {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  width: 100%;
 }
 
 .social img {
@@ -235,5 +237,7 @@ footer p {
   gap: 0.25rem;
   width: 80%;
   max-width: 256px;
-  margin: 0 auto;
+  margin: 0;
+  text-align: left;
+  align-items: flex-start;
 }
