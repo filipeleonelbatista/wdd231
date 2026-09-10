@@ -78,7 +78,9 @@ main {
 
 h1 {
   color: #1a3a5c;
-  text-align: center;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .menu {
