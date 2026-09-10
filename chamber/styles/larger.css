@@ -27,11 +27,13 @@
   }
 
   #members.grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 
-  #members.list section {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+  /* Keep same card layout on large - no override */
+  .card-content img {
+    width: 140px;
+    height: 140px;
   }
 
   footer {

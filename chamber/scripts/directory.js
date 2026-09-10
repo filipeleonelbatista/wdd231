@@ -19,15 +19,24 @@ const displayMembers = (members) => {
     let card = document.createElement("section");
     let name = document.createElement("h2");
     let address = document.createElement("p");
-    let phone = document.createElement("p");
-    let website = document.createElement("a");
+    let divider = document.createElement("hr");
+    let content = document.createElement("div");
     let img = document.createElement("img");
-    let level = document.createElement("p");
+    let info = document.createElement("div");
+    let phone = document.createElement("p");
+    let email = document.createElement("p");
+    let website = document.createElement("a");
 
     name.textContent = member.name;
     address.textContent = member.address;
+    divider.classList.add("divider");
+    content.classList.add("card-content");
+    info.classList.add("card-info");
+
     phone.textContent = member.phone;
-    website.textContent = "Visit Website";
+    // Use website as email placeholder if no email field in JSON, or member.email if exists
+    email.textContent = member.email || member.website.replace("https://", "").replace("www.", "");
+    website.textContent = member.website;
     website.setAttribute("href", member.website);
     website.setAttribute("target", "_blank");
 
@@ -37,20 +46,23 @@ const displayMembers = (members) => {
       card.classList.add("silver");
     }
 
-    level.textContent = `Membership: ${member.membership}`;
-
     img.setAttribute("src", `images/${member.image}`);
     img.setAttribute("alt", `Logo of ${member.name}`);
     img.setAttribute("loading", "lazy");
     img.setAttribute("width", "300");
-    img.setAttribute("height", "200");
+    img.setAttribute("height", "300");
 
-    card.appendChild(img);
+    info.appendChild(phone);
+    info.appendChild(email);
+    info.appendChild(website);
+
+    content.appendChild(img);
+    content.appendChild(info);
+
     card.appendChild(name);
     card.appendChild(address);
-    card.appendChild(phone);
-    card.appendChild(website);
-    card.appendChild(level);
+    card.appendChild(divider);
+    card.appendChild(content);
 
     cards.appendChild(card);
   });
