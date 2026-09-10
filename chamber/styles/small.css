@@ -95,6 +95,8 @@ h1 {
   min-height: 44px;
   border: none;
   margin: 0 0.5rem;
+  color: #ffffff;
+  background-color: #3c5874;
 }
 
 #members.grid {
