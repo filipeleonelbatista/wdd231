@@ -173,3 +173,10 @@ footer p {
   margin: 0;
   font-size: 0.875rem;
 }
+
+.chamber-contact,
+.course-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
