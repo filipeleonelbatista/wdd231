@@ -33,12 +33,24 @@ const displayMembers = (members) => {
     content.classList.add("card-content");
     info.classList.add("card-info");
 
-    phone.textContent = member.phone;
-    // Use website as email placeholder if no email field in JSON, or member.email if exists
-    email.textContent = member.email || member.website.replace("https://", "").replace("www.", "");
+    let phoneLabel = document.createElement("strong");
+    phoneLabel.textContent = "PHONE: ";
+    phone.appendChild(phoneLabel);
+    phone.appendChild(document.createTextNode(member.phone));
+
+    let emailLabel = document.createElement("strong");
+    emailLabel.textContent = "EMAIL: ";
+    email.appendChild(emailLabel);
+    email.appendChild(document.createTextNode(member.email || member.website.replace("https://", "").replace("www.", "")));
+
+    let urlLabel = document.createElement("strong");
+    urlLabel.textContent = "URL: ";
+    let websiteWrapper = document.createElement("p");
+    websiteWrapper.appendChild(urlLabel);
     website.textContent = member.website;
     website.setAttribute("href", member.website);
     website.setAttribute("target", "_blank");
+    websiteWrapper.appendChild(website);
 
     if (member.membership === 3) {
       card.classList.add("gold");
@@ -54,7 +66,7 @@ const displayMembers = (members) => {
 
     info.appendChild(phone);
     info.appendChild(email);
-    info.appendChild(website);
+    info.appendChild(websiteWrapper);
 
     content.appendChild(img);
     content.appendChild(info);
