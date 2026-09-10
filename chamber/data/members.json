@@ -2,7 +2,7 @@
   {
     "name": "General Motors Gravataí Plant",
     "address": "Rodovia BR-290, Km 67, Lote 14 - Gravataí, RS 94065-140",
-    "phone": "(51) 3462-8000",
+    "phone": "+55 51 3462-8000",
     "website": "https://www.chevrolet.com.br",
     "image": "gm-gravatai.webp",
     "membership": 3,
@@ -12,7 +12,7 @@
   {
     "name": "Dana Industries Gravataí",
     "address": "Av. Principal Industrial, 2500 - Distrito Industrial, Gravataí, RS 94090-000",
-    "phone": "(51) 3488-3000",
+    "phone": "+55 51 3488-3000",
     "website": "https://www.dana.com",
     "image": "dana-gravatai.webp",
     "membership": 3,
@@ -22,7 +22,7 @@
   {
     "name": "Panatlântica Steel Gravataí",
     "address": "RS-118, 10000 - Neópolis, Gravataí, RS 94100-250",
-    "phone": "(51) 3479-6000",
+    "phone": "+55 51 3479-6000",
     "website": "https://www.panatlantica.com.br",
     "image": "panatlantica-gravatai.webp",
     "membership": 2,
@@ -32,7 +32,7 @@
   {
     "name": "Digicon Electronic Controls",
     "address": "Rua Nissin Castiel 640 - Distrito Industrial, Gravataí, RS 94090-000",
-    "phone": "(51) 3489-8800",
+    "phone": "+55 51 3489-8800",
     "website": "https://www.digicon.com.br",
     "image": "digicon-gravatai.webp",
     "membership": 3,
@@ -52,7 +52,7 @@
   {
     "name": "Lider Wood and Construction",
     "address": "RS-020, 3919 - Neópolis, Gravataí, RS 94100-250",
-    "phone": "(51) 3488-2170",
+    "phone": "+55 51 3488-2170",
     "website": "https://www.lidermadeirasgravatai.com.br",
     "image": "lider-gravatai.webp",
     "membership": 2,
@@ -62,7 +62,7 @@
   {
     "name": "Perto Automation Systems",
     "address": "Rua Jacinto Scotti 65 - Morada do Vale, Gravataí, RS 94040-000",
-    "phone": "(51) 3488-8700",
+    "phone": "+55 51 3488-8700",
     "website": "https://www.perto.com.br",
     "image": "perto-gravatai.webp",
     "membership": 1,
