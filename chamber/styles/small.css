@@ -84,8 +84,9 @@ h1 {
 .menu {
   margin: 1rem auto;
   padding: 0.5rem;
-  background-color: #1a3a5c;
   text-align: center;
+  background: none;
+  border: none;
 }
 
 .menu button {
