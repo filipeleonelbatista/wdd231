@@ -233,4 +233,7 @@ footer p {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  width: 80%;
+  max-width: 256px;
+  margin: 0 auto;
 }
