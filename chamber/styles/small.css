@@ -254,3 +254,62 @@ footer p {
   text-align: left;
   align-items: flex-start;
 }
+
+/* HOME */
+.hero {
+  position: relative;
+  margin: 1rem 0;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cta {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #1a3a5c;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  min-height: 44px;
+}
+
+.events,
+.weather,
+.spotlights {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.weather figure {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+#forecast p {
+  margin: 0.25rem 0;
+  font-weight: 700;
+  color: #1a3a5c;
+}
+#spotlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+#spotlights section {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+}
+#spotlights img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}

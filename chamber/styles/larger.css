@@ -42,4 +42,23 @@
     text-align: left;
     padding: 1.5rem 2rem;
   }
+
+  /* Home only: scoped to main.home so directory.html stays single column */
+  main.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  main.home h1,
+  main.home .hero,
+  main.home .spotlights {
+    grid-column: 1 / 3;
+  }
+  #spotlights {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .hero img {
+    height: 300px;
+    object-fit: cover;
+  }
 }
