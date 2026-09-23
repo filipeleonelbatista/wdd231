@@ -259,6 +259,8 @@ footer p {
 .hero {
   position: relative;
   margin: 1rem 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 .hero img {
   display: block;
@@ -286,6 +288,8 @@ footer p {
   border-radius: 8px;
   padding: 1rem;
   margin: 1rem 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 .weather figure {
   text-align: center;
@@ -307,6 +311,9 @@ footer p {
   padding: 1rem;
   text-align: center;
   background: #fff;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 #spotlights img {
   width: 100px;
@@ -315,30 +322,12 @@ footer p {
   max-width: 100%;
 }
 
-#spotlights section {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
 #spotlights section p,
 #spotlights section a {
   max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
-}
-
-#spotlights section a {
   display: block;
-  word-break: break-all;
-}
-
-.events,
-.weather,
-.hero,
-.spotlights {
-  max-width: 100%;
-  overflow-wrap: break-word;
 }
 
 .join-container {
@@ -429,9 +418,10 @@ footer p {
   animation-delay: 0.4s;
 }
 
-.membership-card h3 {
+.membership-card h2 {
   color: #1a3a5c;
   margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
 }
 
 .membership-card button {
