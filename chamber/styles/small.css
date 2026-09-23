@@ -312,6 +312,33 @@ footer p {
   width: 100px;
   height: 100px;
   object-fit: cover;
+  max-width: 100%;
+}
+
+#spotlights section {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#spotlights section p,
+#spotlights section a {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#spotlights section a {
+  display: block;
+  word-break: break-all;
+}
+
+.events,
+.weather,
+.hero,
+.spotlights {
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .join-container {
