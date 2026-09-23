@@ -61,4 +61,11 @@
     height: 300px;
     object-fit: cover;
   }
+
+  .join-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    align-items: start;
+  }
 }

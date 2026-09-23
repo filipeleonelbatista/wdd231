@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravataí Chamber of Commerce - Join</title>
+    <meta
+      name="description"
+      content="Join the Gravataí Chamber of Commerce. Complete the membership application form to become a member and access networking and business support."
+    />
+    <meta name="author" content="Filipe Leonel Batista" />
+    <meta
+      property="og:title"
+      content="Gravataí Chamber of Commerce - Join"
+    />
+    <meta
+      property="og:description"
+      content="Apply to join the Gravataí Chamber of Commerce. Choose your membership level and submit your business information."
+    />
+    <meta
+      property="og:image"
+      content="https://filipeleonelbatista.github.io/wdd231/chamber/images/gravatai-hero.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://filipeleonelbatista.github.io/wdd231/chamber/join.html"
+    />
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/logo.svg"
+        alt="Gravataí Chamber logo"
+        width="60"
+        height="60"
+      />
+      <span>Gravataí Chamber of Commerce</span>
+      <button id="nav-button" class="hamburger" aria-label="navigation">
+        ☰
+      </button>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li class="current"><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Join</h1>
+      <div class="join-container">
+        <form method="get" action="thankyou.html" class="join-form">
+          <label>First Name <input type="text" name="firstName" title="First Name" autocomplete="given-name" required></label>
+          <label>Last Name <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required></label>
+          <label>Organization Title <input type="text" name="orgTitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}"></label>
+          <label>Email <input type="email" name="email" title="Email" autocomplete="email" placeholder="example@email.com" required></label>
+          <label>Phone <input type="tel" name="phone" title="Phone" autocomplete="tel" required></label>
+          <label>Business Name <input type="text" name="business" title="Business Name" autocomplete="organization" required></label>
+          <label>Membership Level
+            <select name="membership" title="Membership Level" required>
+              <option value="">Select a level</option>
+              <option value="np">NP Membership (Non Profit - No Fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+          <label>Business Description <textarea name="description" title="Business Description"></textarea></label>
+          <input type="hidden" name="timestamp" id="timestamp">
+          <input type="submit" value="Join the Chamber">
+        </form>
+
+        <div class="membership-cards">
+          <div class="membership-card" id="np-card">
+            <h3>NP Membership</h3>
+            <p>For non profit organizations - No fee</p>
+            <button id="np-button">Learn More</button>
+          </div>
+          <div class="membership-card" id="bronze-card">
+            <h3>Bronze Membership</h3>
+            <p>Basic membership with essential benefits</p>
+            <button id="bronze-button">Learn More</button>
+          </div>
+          <div class="membership-card" id="silver-card">
+            <h3>Silver Membership</h3>
+            <p>Enhanced benefits and training</p>
+            <button id="silver-button">Learn More</button>
+          </div>
+          <div class="membership-card" id="gold-card">
+            <h3>Gold Membership</h3>
+            <p>Premium benefits and spotlight</p>
+            <button id="gold-button">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <dialog id="np-modal">
+        <button id="close-np">❌</button>
+        <h3>NP Membership Benefits</h3>
+        <p>No fee for non profit organizations</p>
+        <p>Access to basic events and networking</p>
+        <p>Listing in directory</p>
+      </dialog>
+      <dialog id="bronze-modal">
+        <button id="close-bronze">❌</button>
+        <h3>Bronze Membership Benefits</h3>
+        <p>All NP benefits plus</p>
+        <p>Basic training sessions</p>
+        <p>Social media mention</p>
+        <p>Event discounts 10%</p>
+      </dialog>
+      <dialog id="silver-modal">
+        <button id="close-silver">❌</button>
+        <h3>Silver Membership Benefits</h3>
+        <p>All Bronze benefits plus</p>
+        <p>Advanced training</p>
+        <p>Homepage spotlight</p>
+        <p>Event discounts 20%</p>
+        <p>Advertising package</p>
+      </dialog>
+      <dialog id="gold-modal">
+        <button id="close-gold">❌</button>
+        <h3>Gold Membership Benefits</h3>
+        <p>All Silver benefits plus</p>
+        <p>Premium spotlight position</p>
+        <p>Exclusive events</p>
+        <p>Event discounts 30%</p>
+        <p>Priority support</p>
+      </dialog>
+    </main>
+
+    <footer>
+      <div class="chamber-contact">
+        <p><strong>Gravataí Chamber of Commerce</strong></p>
+        <p>
+          Av. Itacolomi, 3600 - Parque Res. São Vicente, Gravataí, RS
+          94155-052
+        </p>
+        <p>
+          prefeitura@gravatai.rs.gov.br | ouvidoria@gravatai.rs.gov.br
+        </p>
+        <p>+55 51 3600-7001 | +55 51 3600-7028</p>
+      </div>
+      <div class="social">
+        <a href="https://github.com/filipeleonelbatista" target="_blank"
+          ><img src="images/github.svg" alt="GitHub" width="30" height="30"
+        /></a>
+        <a href="https://linkedin.com/in/filipeleonelbatista" target="_blank"
+          ><img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30"
+        /></a>
+      </div>
+      <div class="course-info">
+        <p>&copy; <span id="currentyear"></span> Gravataí Chamber of Commerce</p>
+        <p>Filipe Leonel Batista | WDD 231</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>
