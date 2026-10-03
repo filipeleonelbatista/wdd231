@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Desktop wireframe">
+<rect x="5" y="5" width="790" height="490" fill="white" stroke="black" stroke-width="2"/>
+<rect x="15" y="15" width="770" height="50" fill="white" stroke="black"/>
+<text x="25" y="45" font-family="sans-serif" font-size="14" fill="black">Header: logo + nav horizontal</text>
+<rect x="15" y="75" width="770" height="40" fill="white" stroke="black"/>
+<text x="25" y="100" font-family="sans-serif" font-size="14" fill="black">H1: PetID Registry</text>
+<rect x="15" y="125" width="770" height="150" fill="white" stroke="black"/>
+<text x="25" y="150" font-family="sans-serif" font-size="14" fill="black">Hero 2-col: text + QR tag image</text>
+<rect x="15" y="285" width="250" height="120" fill="white" stroke="black"/>
+<rect x="275" y="285" width="250" height="120" fill="white" stroke="black"/>
+<rect x="535" y="285" width="250" height="120" fill="white" stroke="black"/>
+<text x="25" y="310" font-family="sans-serif" font-size="12" fill="black">3 cards row</text>
+<rect x="15" y="415" width="770" height="50" fill="white" stroke="black"/>
+<text x="25" y="445" font-family="sans-serif" font-size="14" fill="black">Footer</text>
+</svg>
