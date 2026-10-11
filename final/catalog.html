@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adoption Catalog - RegisterPET | Find a pet</title>
+    <meta
+      name="description"
+      content="Browse the RegisterPET adoption catalog to discover pets looking for a home."
+    />
+    <meta name="author" content="Filipe Leonel Batista" />
+    <meta property="og:title" content="Adoption Catalog - RegisterPET" />
+    <meta
+      property="og:description"
+      content="Explore pets available for adoption in the RegisterPET catalog."
+    />
+<meta
+      property="og:image"
+      content="https://filipeleonelbatista.github.io/wdd231/final/images/pet-hero-small.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://filipeleonelbatista.github.io/wdd231/final/catalog.html"
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo-optimized.jpg" alt="RegisterPET logo" width="60" height="60" />
+        <span>RegisterPET</span>
+        <button id="nav-button" class="hamburger" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="catalog.html" aria-current="page">Adoption Catalog</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Adoption Catalog</h1>
+        <section class="catalog-section" aria-labelledby="catalog-heading">
+            <h2 id="catalog-heading">Pets looking for a home</h2>
+            <p>Browse the profiles and use the filters to find pets that match what you are looking for.</p>
+            <div class="catalog-controls" aria-label="Filter pets">
+                <label for="pet-search">Search by name or breed
+                    <input id="pet-search" name="search" type="search" autocomplete="off" />
+                </label>
+                <label for="species-filter">Pet type
+                    <select id="species-filter" name="species">
+                        <option value="all">All types</option>
+                        <option value="Dog">Dogs</option>
+                        <option value="Cat">Cats</option>
+                        <option value="Rabbit">Rabbits</option>
+                        <option value="Bird">Birds</option>
+                    </select>
+                </label>
+                <fieldset class="category-filters">
+                    <legend>Listing</legend>
+                    <div class="filter-buttons">
+                        <button type="button" class="filter-button" data-category="all" aria-pressed="true">All</button>
+                        <button type="button" class="filter-button" data-category="Adoption" aria-pressed="false">Adoption</button>
+                        <button type="button" class="filter-button" data-category="Pedigree" aria-pressed="false">Pedigree</button>
+                    </div>
+                </fieldset>
+            </div>
+            <p id="catalog-status" class="status-message" role="status" aria-live="polite">Loading pet profiles...</p>
+            <div id="pet-list" class="pet-grid" aria-label="Pet profiles"></div>
+        </section>
+    </main>
+    <dialog id="pet-dialog" aria-labelledby="dialog-title">
+        <div id="pet-dialog-content"></div>
+        <button class="dialog-close" type="button">Close</button>
+    </dialog>
+    <footer>
+        <div class="social" aria-label="Social media">
+            <a href="https://github.com/filipeleonelbatista" target="_blank" rel="noopener noreferrer"><img src="images/github.svg" alt="GitHub" width="30" height="30" /></a>
+            <a href="https://linkedin.com/in/filipeleonelbatista" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30" /></a>
+            <a href="https://youtube.com/@filipeleonelbatista" target="_blank" rel="noopener noreferrer"><img src="images/youtube.svg" alt="YouTube" width="30" height="30" /></a>
+        </div>
+        <p><a href="https://www.youtube.com/watch?v=A3Cy59Bqe18" target="_blank" rel="noopener noreferrer">Watch the RegisterPET project video</a></p>
+        <p><a href="attributions.html">Photo attributions</a></p>
+        <p>&copy; <span id="currentyear"></span> Filipe Leonel Batista | RegisterPET</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script type="module" src="scripts/catalog.js"></script>
+</body>
+</html>

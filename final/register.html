@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Your Pet - RegisterPET</title>
+    <meta
+      name="description"
+      content="Register your pet with RegisterPET to create a digital profile for important pet information."
+    />
+    <meta name="author" content="Filipe Leonel Batista" />
+    <meta property="og:title" content="Register Your Pet - RegisterPET" />
+    <meta
+      property="og:description"
+      content="Create a RegisterPET digital profile to keep important information about your pet together."
+    />
+<meta
+      property="og:image"
+      content="https://filipeleonelbatista.github.io/wdd231/final/images/pet-hero-small.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://filipeleonelbatista.github.io/wdd231/final/register.html"
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo-optimized.jpg" alt="RegisterPET logo" width="60" height="60" />
+        <span>RegisterPET</span>
+        <button id="nav-button" class="hamburger" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Adoption Catalog</a></li>
+                <li class="current"><a href="register.html" aria-current="page">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Register Your Pet</h1>
+        <section aria-labelledby="register-heading">
+            <h2 id="register-heading">Create a pet profile</h2>
+            <p>Enter your pet's details below. This project demo saves registrations in this browser only.</p>
+            <form id="pet-registration" class="registration-form" method="get" action="thankyou.html">
+                <label for="pet-name">Pet name
+                    <input id="pet-name" name="petName" type="text" autocomplete="off" required maxlength="60" />
+                </label>
+                <label for="pet-species">Pet type
+                    <select id="pet-species" name="species" required>
+                        <option value="">Choose a type</option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Rabbit">Rabbit</option>
+                        <option value="Bird">Bird</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+                <label for="pet-breed">Breed or description
+                    <input id="pet-breed" name="breed" type="text" required maxlength="80" />
+                </label>
+                <label for="pet-age">Age
+                    <input id="pet-age" name="age" type="text" required maxlength="40" placeholder="For example, 2 years" />
+                </label>
+                <label for="owner-name">Your name
+                    <input id="owner-name" name="ownerName" type="text" autocomplete="name" required maxlength="80" />
+                </label>
+                <label for="owner-email">Email
+                    <input id="owner-email" name="email" type="email" autocomplete="email" required maxlength="120" />
+                </label>
+                <label class="form-wide" for="pet-notes">Care notes (optional)
+                    <textarea id="pet-notes" name="notes" rows="4" maxlength="500"></textarea>
+                </label>
+                <input id="registration-id" type="hidden" name="id" />
+                <p id="registration-status" class="status-message form-wide" role="alert" aria-live="assertive"></p>
+                <button class="button-link form-wide" type="submit">Save pet profile</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social" aria-label="Social media">
+            <a href="https://github.com/filipeleonelbatista" target="_blank" rel="noopener noreferrer"><img src="images/github.svg" alt="GitHub" width="30" height="30" /></a>
+            <a href="https://linkedin.com/in/filipeleonelbatista" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30" /></a>
+            <a href="https://youtube.com/@filipeleonelbatista" target="_blank" rel="noopener noreferrer"><img src="images/youtube.svg" alt="YouTube" width="30" height="30" /></a>
+        </div>
+        <p><a href="https://www.youtube.com/watch?v=A3Cy59Bqe18" target="_blank" rel="noopener noreferrer">Watch the RegisterPET project video</a></p>
+        <p><a href="attributions.html">Photo attributions</a></p>
+        <p>&copy; <span id="currentyear"></span> Filipe Leonel Batista | RegisterPET</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script type="module" src="scripts/register.js"></script>
+</body>
+</html>
