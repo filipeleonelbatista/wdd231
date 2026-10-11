@@ -16,12 +16,14 @@ function addTextElement(parent, tagName, text, className) {
     if (className) {
         element.className = className;
     }
-    parent.append(element);
+    parent.appendChild(element);
     return element;
 }
 
 function showPetDetails(pet) {
-    dialogContent.replaceChildren();
+    while (dialogContent.firstChild) {
+        dialogContent.removeChild(dialogContent.firstChild);
+    }
     addTextElement(dialogContent, 'p', pet.category, 'pet-badge');
     const title = addTextElement(dialogContent, 'h2', pet.name, 'dialog-title');
     title.id = 'dialog-title';
@@ -32,7 +34,7 @@ function showPetDetails(pet) {
     image.width = 320;
     image.height = 220;
     image.className = 'dialog-pet-image';
-    dialogContent.append(image);
+    dialogContent.appendChild(image);
 
     addTextElement(dialogContent, 'p', pet.description);
     const details = document.createElement('dl');
@@ -46,30 +48,31 @@ function showPetDetails(pet) {
         addTextElement(details, 'dt', label);
         addTextElement(details, 'dd', value);
     }
-    dialogContent.append(details);
+    dialogContent.appendChild(details);
     petDialog.showModal();
 }
 
 function renderPets() {
-    const searchTerm = searchInput.value.trim().toLocaleLowerCase();
+    const searchTerm = searchInput.value.trim().toLowerCase();
     const selectedSpecies = speciesFilter.value;
     const matches = pets.filter((pet) => {
         const matchesSearch = `${pet.name} ${pet.breed} ${pet.location}`
-            .toLocaleLowerCase()
+            .toLowerCase()
             .includes(searchTerm);
         return matchesSearch
             && (selectedSpecies === 'all' || pet.species === selectedSpecies)
             && (selectedCategory === 'all' || pet.category === selectedCategory);
     });
 
-    petList.replaceChildren();
+    while (petList.firstChild) {
+        petList.removeChild(petList.firstChild);
+    }
     if (matches.length === 0) {
         statusMessage.textContent = 'No pets match those filters. Try another search.';
         return;
     }
 
     statusMessage.textContent = `${matches.length} ${matches.length === 1 ? 'pet' : 'pets'} found.`;
-    const fragment = document.createDocumentFragment();
     matches.forEach((pet) => {
         const card = document.createElement('article');
         card.className = 'pet-card';
@@ -80,7 +83,7 @@ function renderPets() {
         image.width = 320;
         image.height = 220;
         image.loading = 'lazy';
-        card.append(image);
+        card.appendChild(image);
 
         const content = document.createElement('div');
         content.className = 'pet-card-content';
@@ -95,17 +98,16 @@ function renderPets() {
         detailsButton.className = 'details-button';
         detailsButton.textContent = 'View details';
         detailsButton.addEventListener('click', () => showPetDetails(pet));
-        content.append(detailsButton);
+        content.appendChild(detailsButton);
 
-        card.append(content);
-        fragment.append(card);
+        card.appendChild(content);
+        petList.appendChild(card);
     });
-    petList.append(fragment);
 }
 
 async function loadPets() {
     try {
-        const response = await fetch(new URL('../data/pets.json', import.meta.url));
+        const response = await fetch('data/pets.json');
         if (!response.ok) {
             throw new Error(`Could not load pet profiles (HTTP ${response.status}).`);
         }

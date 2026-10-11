@@ -25,9 +25,10 @@ if (!registrationId) {
             term.textContent = label;
             const description = document.createElement('dd');
             description.textContent = value;
-            details.append(term, description);
+            details.appendChild(term);
+            details.appendChild(description);
         });
-        registrationSummary.append(details);
+        registrationSummary.appendChild(details);
     }
 } else {
     try {
@@ -51,9 +52,10 @@ if (!registrationId) {
                 term.textContent = label;
                 const description = document.createElement('dd');
                 description.textContent = value;
-                details.append(term, description);
+                details.appendChild(term);
+                details.appendChild(description);
             }
-            registrationSummary.append(details);
+            registrationSummary.appendChild(details);
         }
     } catch (error) {
         confirmationMessage.textContent = 'Your saved registration could not be read from this browser. Check browser storage settings.';
